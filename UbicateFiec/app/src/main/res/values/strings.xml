@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">UbicateFiec</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_activity_buscar_aulas">BuscarAulas</string>
+    <string name="title_activity_buscar_facultad">BuscarFacultad</string>
+    <string name="title_activity_credito">Credito</string>
+    <string name="title_activity_entrada_menu">EntradaMenu</string>
+</resources>
