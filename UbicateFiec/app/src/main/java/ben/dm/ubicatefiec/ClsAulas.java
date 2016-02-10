@@ -20,8 +20,20 @@ public class ClsAulas {
 
     }
     public ArrayList<String> getAulas() {
+        listAulas.add("Destino");
         listAulas.add("RECTORADO");
         listAulas.add("BIBLIOTECA");
+
+        listAulas.add("(FIEC) Lab - Redes Eléctricas");
+        listAulas.add("(FIEC) Lab - Robotica");
+        listAulas.add("(FIEC) Lab - Sistema Potencia");
+        listAulas.add("(FIEC) Lab - Electrónica A");
+        listAulas.add("(FIEC) Lab - Electrónica B");
+        listAulas.add("(FIEC) COM1");
+        listAulas.add("(FIEC) COM2");
+        listAulas.add("(FIEC) COM3");
+        listAulas.add("(FIEC) Lab - Cisco");
+        listAulas.add("(FIEC) Lab - Multimedia");
 
         listAulas.add("(EDCOM) B-204 Aula");
         listAulas.add("(EDCOM) B-208 Aula");
@@ -100,16 +112,7 @@ public class ClsAulas {
         listAulas.add("(FCSH) IC-21");
         listAulas.add("(FCSH) IC-22");
 
-        listAulas.add("(FIEC) Lab - Redes Eléctricas");
-        listAulas.add("(FIEC) Lab - Robotica");
-        listAulas.add("(FIEC) Lab - Sistema Potencia");
-        listAulas.add("(FIEC) Lab - Electrónica A");
-        listAulas.add("(FIEC) Lab - Electrónica B");
-        listAulas.add("(FIEC) COM1");
-        listAulas.add("(FIEC) COM2");
-        listAulas.add("(FIEC) COM3");
-        listAulas.add("(FIEC) Lab - Cisco");
-        listAulas.add("(FIEC) Lab - Multimedia");
+
         return listAulas;
     }
 
@@ -173,7 +176,7 @@ public class ClsAulas {
         listFacultadesD.add("FIMCBOR");
         listFacultadesD.add("EDCOM");
 
-        return listAulas;
+        return listFacultadesD;
     }
 
 

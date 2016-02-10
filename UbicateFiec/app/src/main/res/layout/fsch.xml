@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imgFacultades"
-            android:src="@drawable/FSCH"
+            android:src="@drawable/fsch"
             android:layout_gravity="top" />
 
 

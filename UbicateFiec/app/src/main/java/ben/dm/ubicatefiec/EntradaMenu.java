@@ -20,7 +20,7 @@ public class EntradaMenu extends Activity {
 
         btnAulas=(Button)findViewById(R.id.btnBuscarAulas);
         btnFacultad=(Button)findViewById(R.id.btnBuscarF);
-        btnCreditos=(Button)findViewById(R.id.btnCreditos);
+
 
         btnAulas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,13 +36,7 @@ public class EntradaMenu extends Activity {
                 startActivity(i);
             }
         });
-        btnCreditos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(EntradaMenu.this, Credito.class);
-                startActivity(i);
-            }
-        });
+
     }
 
 

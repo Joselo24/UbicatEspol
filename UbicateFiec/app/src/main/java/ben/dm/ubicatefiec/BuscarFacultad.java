@@ -106,8 +106,6 @@ public class BuscarFacultad extends FragmentActivity implements GoogleMap.OnMapC
         });
 
     }
-
-
     public void crearRecorridoControlador(){
         try {
             LatLng partida = null, destino = null;
@@ -127,81 +125,285 @@ public class BuscarFacultad extends FragmentActivity implements GoogleMap.OnMapC
             crearFacultades(BIBLIO, "BIBLIOTECA","BIBLIOTECA CENTRAL DE INGENIERÍA");
 
 
-            switch (key) {
-                case "FIEC":
-                    partida= FIEC;
-                  break;
-                case "FIMCP":
-                    partida= FIMCP;
-                    break;
-                case "FICT":
-                    partida= FICT;
-                    break;
-                case "FCSH":
-                    partida= FCSH;
-                    break;
-                case "CELEX":
-                    partida= CELEX;
-                    break;
-                case "FCNM":
-                    partida= FCNM;
-                    break;
-                case "FIMCBOR":
-                    partida= FIMCBOR;
-                     break;
-                case "EDCOM":
-                    partida= EDCOM;
-                    break;
-                case "RECTORADO":
-                    partida= RECTORADO;
-                    break;
-                case "BIBLIOTECA":
-                    partida= BIBLIO;
-                    break;
+            if(key=="FIEC"){
 
-                default:
-                    break;
+                getRutasDetallada(key2);
+            }else {
+                switch (key) {
+                    case "FIEC":
+                        partida = FIEC;
+                        break;
+                    case "FIMCP":
+                        partida = FIMCP;
+                        break;
+                    case "FICT":
+                        partida = FICT;
+                        break;
+                    case "FCSH":
+                        partida = FCSH;
+                        break;
+                    case "CELEX":
+                        partida = CELEX;
+                        break;
+                    case "FCNM":
+                        partida = FCNM;
+                        break;
+                    case "FIMCBOR":
+                        partida = FIMCBOR;
+                        break;
+                    case "EDCOM":
+                        partida = EDCOM;
+                        break;
+                    case "RECTORADO":
+                        partida = RECTORADO;
+                        break;
+                    case "BIBLIOTECA":
+                        partida = BIBLIO;
+                        break;
 
+                    default:
+                        break;
+
+                }
+                switch (key2) {
+                    case "FIEC":
+                        destino = FIEC;
+                        break;
+                    case "FIMCP":
+                        destino = FIMCP;
+                        break;
+                    case "FICT":
+                        destino = FICT;
+                        break;
+                    case "FCSH":
+                        destino = FCSH;
+                        break;
+                    case "CELEX":
+                        destino = CELEX;
+                        break;
+                    case "FCNM":
+                        destino = FCNM;
+                        break;
+                    case "FIMCBOR":
+                        destino = FIMCBOR;
+                        break;
+                    case "EDCOM":
+                        destino = EDCOM;
+                        break;
+                    case "RECTORADO":
+                        destino = RECTORADO;
+                        break;
+                    case "BIBLIOTECA":
+                        destino = BIBLIO;
+                        break;
+
+                    default:
+                        break;
+
+                }
+                getRutas(partida, destino);
             }
-            switch (key2) {
-                case "FIEC":
-                    destino= FIEC;
-                    break;
-                case "FIMCP":
-                    destino= FIMCP;
-                    break;
-                case "FICT":
-                    destino= FICT;
-                    break;
-                case "FCSH":
-                    destino= FCSH;
-                    break;
-                case "CELEX":
-                    destino= CELEX;
-                    break;
-                case "FCNM":
-                    destino= FCNM;
-                    break;
-                case "FIMCBOR":
-                    destino= FIMCBOR;
-                    break;
-                case "EDCOM":
-                    destino= EDCOM;
-                    break;
-                case "RECTORADO":
-                    destino= RECTORADO;
-                    break;
-                case "BIBLIOTECA":
-                    destino= BIBLIO;
-                    break;
-
-                default:
-                    break;
-
-            }
-            getRutas(partida,destino);
 
         }catch (Exception e){}
+    }
+
+    private void getRutasDetallada(String key){
+
+        switch (key) {
+
+            case "FIMCP":
+                PolylineOptions ruta_Fiec_Fimcp = new PolylineOptions()
+                        .add(new LatLng(-2.144820, -79.967392))
+                        .add(new LatLng(-2.144814, -79.967264))
+                        .add(new LatLng(-2.144504, -79.967151))
+                        .add(new LatLng(-2.144600, -79.966764))
+                        .add(new LatLng(-2.144497, -79.966650))
+                        .add(new LatLng(-2.144574, -79.966415))
+                        .add(new LatLng(-2.144250, -79.966269));
+                ruta_Fiec_Fimcp.width(1);
+                ruta_Fiec_Fimcp.color(Color.RED);
+                mapa.addPolyline(ruta_Fiec_Fimcp);
+                break;
+            case "FICT":
+                PolylineOptions ruta_Fiec_Fict = new PolylineOptions()
+                        .add(new LatLng(-2.144820, -79.967392))
+                        .add(new LatLng(-2.144890, -79.967584))
+                        .add(new LatLng(-2.144874, -79.967336))
+                        .add(new LatLng(-2.144787, -79.967225))
+                        .add(new LatLng(-2.144886, -79.966922))
+                        .add(new LatLng(-2.145124, -79.966990))
+                        .add(new LatLng(-2.145282, -79.966536))
+                        .add(new LatLng(-2.145218, -79.966290))
+                        .add(new LatLng(-2.144741, -79.966059))
+                        .add(new LatLng(-2.144722, -79.965987))
+                        .add(new LatLng(-2.144910, -79.965593))
+                        .add(new LatLng(-2.145258, -79.965555))
+                        .add(new LatLng(-2.145324, -79.965336))
+                        .add(new LatLng(-2.145522, -79.965385));
+                ruta_Fiec_Fict.width(1);
+                ruta_Fiec_Fict.color(Color.RED);
+                mapa.addPolyline(ruta_Fiec_Fict);
+                break;
+            case "FCSH":
+                PolylineOptions ruta_Fiec_Fcsh = new PolylineOptions()
+                        .add(new LatLng(-2.144820, -79.967392))
+                        .add(new LatLng(-2.144618, -79.968085))
+                        .add(new LatLng(-2.146248, -79.968429))
+                        .add(new LatLng(-2.146634, -79.968417))
+                        .add(new LatLng(-2.147092, -79.968333))
+                        .add(new LatLng(-2.147383, -79.968236))
+                        .add(new LatLng(-2.147607, -79.968623))
+                        .add(new LatLng(-2.147697, -79.968625));
+                ruta_Fiec_Fcsh.width(1);
+                ruta_Fiec_Fcsh.color(Color.RED);
+                mapa.addPolyline(ruta_Fiec_Fcsh);
+                break;
+            case "CELEX":
+                PolylineOptions ruta_Fiec_Celex = new PolylineOptions()
+                        .add(new LatLng(-2.144820, -79.967392))
+                        .add(new LatLng(-2.144896, -79.967471))
+                        .add(new LatLng(-2.144998, -79.967438))
+                        .add(new LatLng(-2.145157, -79.967440))
+                        .add(new LatLng(-2.145777, -79.967245))
+                        .add(new LatLng(-2.146025, -79.966988))
+                        .add(new LatLng(-2.146232, -79.966829))
+                        .add(new LatLng(-2.146631, -79.966990))
+                        .add(new LatLng(-2.146742, -79.966920))
+                        .add(new LatLng(-2.147449, -79.967182))
+                        .add(new LatLng(-2.147532, -79.966932))
+                        .add(new LatLng(-2.147720, -79.966996))
+                        .add(new LatLng(-2.147917, -79.967046))
+                        .add(new LatLng(-2.148278, -79.967327))
+                        .add(new LatLng(-2.148331, -79.967244))
+                        .add(new LatLng(-2.148695, -79.967456))
+                        .add(new LatLng(-2.148666, -79.967652));
+                ruta_Fiec_Celex.width(1);
+                ruta_Fiec_Celex.color(Color.RED);
+                mapa.addPolyline(ruta_Fiec_Celex);
+                break;
+            case "FCNM":
+                PolylineOptions ruta_Fiec_Fcnm = new PolylineOptions()
+                        .add(new LatLng(-2.144820, -79.967392))
+                        .add(new LatLng(-2.144896, -79.967471))
+                        .add(new LatLng(-2.144998, -79.967438))
+                        .add(new LatLng(-2.145157, -79.967440))
+                        .add(new LatLng(-2.145777, -79.967245))
+                        .add(new LatLng(-2.146025, -79.966988))
+                        .add(new LatLng(-2.146232, -79.966829))
+                        .add(new LatLng(-2.146631, -79.966990))
+                        .add(new LatLng(-2.146742, -79.966920))
+                        .add(new LatLng(-2.147449, -79.967182))
+                        .add(new LatLng(-2.147532, -79.966932))
+                        .add(new LatLng(-2.147720, -79.966996))
+                        .add(new LatLng(-2.147917, -79.967046))
+                        .add(new LatLng(-2.148278, -79.967327))
+                        .add(new LatLng(-2.148331, -79.967244))
+                        .add(new LatLng(-2.148550, -79.967337))
+                        .add(new LatLng(-2.148589, -79.967203));
+                ruta_Fiec_Fcnm.width(1);
+                ruta_Fiec_Fcnm.color(Color.RED);
+                mapa.addPolyline(ruta_Fiec_Fcnm);
+                break;
+            case "FIMCBOR":
+                PolylineOptions ruta_Fiec_Fimcbor = new PolylineOptions()
+                        .add(new LatLng(-2.144820, -79.967392))
+                        .add(new LatLng(-2.144793, -79.967375))
+                        .add(new LatLng(-2.144922, -79.966849))
+                        .add(new LatLng(-2.144836, -79.966647))
+                        .add(new LatLng(-2.145010, -79.966203))
+                        .add(new LatLng(-2.145227, -79.965551))
+                        .add(new LatLng(-2.145372, -79.965024))
+                        .add(new LatLng(-2.145505, -79.964635))
+                        .add(new LatLng(-2.145669, -79.964625))
+                        .add(new LatLng(-2.145838, -79.964681))
+                        .add(new LatLng(-2.146104, -79.964528))
+                        .add(new LatLng(-2.146362, -79.964262))
+                        .add(new LatLng(-2.146329, -79.964140))
+                        .add(new LatLng(-2.146776, -79.963887))
+                        .add(new LatLng(-2.147144, -79.963019));
+                ruta_Fiec_Fimcbor.width(1);
+                ruta_Fiec_Fimcbor.color(Color.RED);
+                mapa.addPolyline(ruta_Fiec_Fimcbor);
+                break;
+            case "EDCOM":
+                PolylineOptions ruta_Fiec_Edcom = new PolylineOptions()
+                        .add(new LatLng(-2.144820, -79.967392))
+                        .add(new LatLng(-2.144890, -79.967584))
+                        .add(new LatLng(-2.144874, -79.967336))
+                        .add(new LatLng(-2.144787, -79.967225))
+                        .add(new LatLng(-2.144886, -79.966922))
+                        .add(new LatLng(-2.145124, -79.966990))
+                        .add(new LatLng(-2.145282, -79.966536))
+                        .add(new LatLng(-2.145218, -79.966290))
+                        .add(new LatLng(-2.144741, -79.966059))
+                        .add(new LatLng(-2.144722, -79.965987))
+                        .add(new LatLng(-2.144910, -79.965593))
+                        .add(new LatLng(-2.145258, -79.965555))
+                        .add(new LatLng(-2.145369, -79.965041))
+                        .add(new LatLng(-2.145369, -79.965041))
+                        .add(new LatLng(-2.145366, -79.964408))
+                        .add(new LatLng(-2.145458, -79.964088))
+                        .add(new LatLng(-2.145445, -79.963845))
+                        .add(new LatLng(-2.145412, -79.963732))
+                        .add(new LatLng(-2.145342, -79.963734))
+                        .add(new LatLng(-2.144272, -79.962354))
+                        .add(new LatLng(-2.143987, -79.962131))
+                        .add(new LatLng(-2.143585, -79.962236));
+                ruta_Fiec_Edcom.width(1);
+                ruta_Fiec_Edcom.color(Color.RED);
+                mapa.addPolyline(ruta_Fiec_Edcom);
+                break;
+            case "RECTORADO":
+                PolylineOptions ruta_Fiec_Biblio = new PolylineOptions()
+                        .add(new LatLng(-2.144820, -79.967392))
+                        .add(new LatLng(-2.144896, -79.967471))
+                        .add(new LatLng(-2.144998, -79.967438))
+                        .add(new LatLng(-2.145157, -79.967440))
+                        .add(new LatLng(-2.145777, -79.967245))
+                        .add(new LatLng(-2.146025, -79.966988))
+                        .add(new LatLng(-2.146232, -79.966829))
+                        .add(new LatLng(-2.146120, -79.966655))
+                        .add(new LatLng(-2.146203, -79.966355))
+                        .add(new LatLng(-2.146626, -79.966332))
+                        .add(new LatLng(-2.147140, -79.966431))
+                        .add(new LatLng(-2.147539, -79.966383))
+                        .add(new LatLng(-2.147531, -79.966136))
+                        .add(new LatLng(-2.147481, -79.966041))
+                        .add(new LatLng(-2.147307, -79.966085))
+                        .add(new LatLng(-2.147176, -79.966108));
+                ruta_Fiec_Biblio.width(1);
+                ruta_Fiec_Biblio.color(Color.RED);
+                mapa.addPolyline(ruta_Fiec_Biblio);
+                break;
+            case "BIBLIOTECA":
+                PolylineOptions ruta_Fiec_Biblio2 = new PolylineOptions()
+                        .add(new LatLng(-2.144820, -79.967392))
+                        .add(new LatLng(-2.144896, -79.967471))
+                        .add(new LatLng(-2.144998, -79.967438))
+                        .add(new LatLng(-2.145157, -79.967440))
+                        .add(new LatLng(-2.145777, -79.967245))
+                        .add(new LatLng(-2.146025, -79.966988))
+                        .add(new LatLng(-2.146232, -79.966829))
+                        .add(new LatLng(-2.146120, -79.966655))
+                        .add(new LatLng(-2.146203, -79.966355))
+                        .add(new LatLng(-2.146626, -79.966332))
+                        .add(new LatLng(-2.147140, -79.966431))
+                        .add(new LatLng(-2.147539, -79.966383))
+                        .add(new LatLng(-2.147531, -79.966136))
+                        .add(new LatLng(-2.147481, -79.966041))
+                        .add(new LatLng(-2.147307, -79.966085))
+                        .add(new LatLng(-2.147176, -79.966108));
+                ruta_Fiec_Biblio2.width(1);
+                ruta_Fiec_Biblio2.color(Color.RED);
+                mapa.addPolyline(ruta_Fiec_Biblio2);
+                break;
+
+            default:
+                break;
+
+        }
+
+
     }
 
     private void getAlerta(String key, String detalle){
@@ -216,35 +418,35 @@ public class BuscarFacultad extends FragmentActivity implements GoogleMap.OnMapC
                 oAlerta.setView( oInflater.inflate(R.layout.fiec, null));
                 break;
             case "FIMCP":
-                oAlerta.setView(inflater.inflate(R.layout.edcom, null));
+                oAlerta.setView(inflater.inflate(R.layout.fimcp, null));
                 break;
             case "FICT":
-                oAlerta.setView( oInflater.inflate(R.layout.fimcp, null));
+                oAlerta.setView( oInflater.inflate(R.layout.fict, null));
                 break;
             case "FCSH":
-                oAlerta.setView( oInflater.inflate(R.layout.fimcp, null));
+                oAlerta.setView( oInflater.inflate(R.layout.fsch, null));
                 break;
             case "CELEX":
-                oAlerta.setView( oInflater.inflate(R.layout.fimcp, null));
+                oAlerta.setView( oInflater.inflate(R.layout.celex, null));
                 break;
             case "FCNM":
-                oAlerta.setView( oInflater.inflate(R.layout.fimcp, null));
+                oAlerta.setView( oInflater.inflate(R.layout.fcnm, null));
                 break;
             case "FIMCBOR":
-                oAlerta.setView( oInflater.inflate(R.layout.fimcp, null));
+                oAlerta.setView( oInflater.inflate(R.layout.fimcbor, null));
                 break;
             case "EDCOM":
-                oAlerta.setView( oInflater.inflate(R.layout.fimcp, null));
+                oAlerta.setView( oInflater.inflate(R.layout.edcom, null));
                 break;
             case "RECTORADO":
-                oAlerta.setView( oInflater.inflate(R.layout.fimcp, null));
+                oAlerta.setView( oInflater.inflate(R.layout.rectorado, null));
                 break;
             case "BIBLIOTECA":
-                oAlerta.setView( oInflater.inflate(R.layout.fimcp, null));
+                oAlerta.setView( oInflater.inflate(R.layout.biblioteca, null));
                 break;
 
             default:
-                oAlerta.setView( oInflater.inflate(R.layout.fimcp, null));
+                // oAlerta.setView( oInflater.inflate(R.layout.fimcp, null));
                 break;
 
         }

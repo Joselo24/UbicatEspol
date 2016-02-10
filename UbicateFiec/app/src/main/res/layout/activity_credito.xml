@@ -4,11 +4,9 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="ben.dm.ubicatefiec.Credito"
-    android:background="#ffebe9ff">
+    tools:context="ben.dm.ubicatefiec.Credito">
 
-    <TextView android:text="NO SE QUE PONER AQUI MI PERRO jajajajajaj..." android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/" />
+    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
